@@ -1,0 +1,91 @@
+<%- include('partials/_header'); -%>
+    <section class="container mt-5">
+        <h1 class="ibm-plex-mono-regular mb-5">Programación Lineal</h1>
+        <form id="problema-form">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="numVariables" class="form-label fw-bold ibm-plex-mono-regular">Número de
+                                    Variables:</label>
+                                <input type="number" class="form-control" id="numVariables" value="2" min="1">
+                            </div>
+                            <div class="mb-3">
+                                <button type="button" id="btnGenerar"
+                                    class="btn btn-success w-100 ibm-plex-mono-regular">Generar <i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                            <div class="mb-3">
+                                <button type="button" id="btnAgregarRestriccion"
+                                    class="btn btn-warning w-100 ibm-plex-mono-regular"> Agregar restricción <i
+                                        class="fa-solid fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="mb-2 ibm-plex-mono-regular">Función Objetiva (Optimizar Z)</h5>
+                            <div id="campos-objetivo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="mb-2 ibm-plex-mono-regular">Restricciones</h5>
+                            <div id="restriccionesContainer">
+                            </div>
+
+                            <button type="submit"
+                                class="btn btn-primary w-100 mt-3 ibm-plex-mono-regular">Resolver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row g-4 mb-5 mt-3">
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title ibm-plex-mono-regular">Modelo Aumentado</h5>
+                        <div class="card-body" id="modelo-aumentado-card"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title ibm-plex-mono-regular">Iteraciones del Algoritmo</h5>
+                        <div class="card-body" id="iteraciones-card"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row g-4 mb-5">
+            <div class="col-lg-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title ibm-plex-mono-regular">Solución Final</h5>
+                        <div id="resultado" class="mb-0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 mb-5">
+            <div class="col-lg-12">
+                <div class="card shadow-sm" id="grafico-container">
+                    <div class="card-body">
+                        <h5 class="card-title ibm-plex-mono-regular">Grafica</h5>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<%- include('partials/_footer'); -%>
