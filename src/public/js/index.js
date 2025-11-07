@@ -579,3 +579,18 @@ form.addEventListener('submit', async function (event) {
 // Genera campos iniciales
 document.getElementById('numVariables').value = 2;
 generarCamposObjetivo();
+
+const temaOscuro = () =>{
+    document.querySelector("body").setAttribute("data-bs-theme", "dark");
+    document.querySelector("#mode").setAttribute("class", "fa-solid fa-sun");
+}
+
+const temaClaro = () =>{
+    document.querySelector("body").setAttribute("data-bs-theme", "light");
+    document.querySelector("#mode").setAttribute("class", "fa-solid fa-moon");
+}
+
+const cambiarTema = () =>{
+    document.querySelector("body").getAttribute("data-bs-theme") === "light"?
+    temaOscuro() : temaClaro();
+}

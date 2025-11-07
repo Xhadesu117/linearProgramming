@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,13 +22,18 @@
     <!-- Styles -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
+<body data-bs-theme="light">
 
-<body>
-
-<nav class="navbar bg-body-tertiary shadow-sm p-3 mb-5 bg-body-tertiary rounded">
-    <div class="container">
+<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+    <div class="px-5 container d-flex align-items-center">
         <a class="navbar-brand" href="#">
-            <img src="/images/logounach.png" alt="Bootstrap" width="50" height="50">
+            <img src="/images/logounach.png" alt="unach" class="logo-img">
         </a>
+         <marquee direction="left">
+                <h1 class="display-6 fw-bold text-uppercase text-primary ibm-plex-mono-regular">Benemerita Universidad Autonoma de Chiapas</h1>
+        </marquee>
+        <div class="d-flex align-items-center">
+            <button onclick="cambiarTema()" class="btn btn-outline-primary mx-3"><i id="mode" class="fa-solid fa-moon"></i></button>
+        </div>
     </div>
 </nav>
