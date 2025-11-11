@@ -28,7 +28,7 @@
 }
 
 [data-bs-theme="dark"] .logo-img {
-    content: url('/images/logoUnach.png');
+    content: url('/images/logounach.png');
     background-color: #212529;
     border-radius: 10%;
     background-position: center;
