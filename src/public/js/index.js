@@ -12,8 +12,8 @@ let myChart = null;
 function generarCamposObjetivo() {
     // ... (El resto de esta función es idéntica a tu original)
     const n = parseInt(document.getElementById('numVariables').value) || 0;
-    if (n <= 0 || n > 10) {
-        camposObjetivo.innerHTML = '<p class="text-danger">Define un número de variables entre 1 y 10.</p>';
+    if (n <= 0) {
+        camposObjetivo.innerHTML = '<p class="text-danger">Define un número de variables que no sea menor a 0</p>';
         return;
     }
 
