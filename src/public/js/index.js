@@ -190,7 +190,7 @@ function updateRestrictionOutput(id) {
             if (valNum === 1) terms.push(`x${varNum}`);
             else if (valNum === -1) terms.push(`-x${varNum}`);
             else terms.push(`${valNum}x${varNum}`);
-        }x
+        }
     });
 
     const rhsInput = document.getElementById(`const-${id}-rhs`);
